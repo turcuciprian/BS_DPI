@@ -1,0 +1,6 @@
+beforeGrayscale
+beforeMasks
+afterGreyscale
+afterMasks
+*.jpg
+*.png
