@@ -4,8 +4,8 @@ import os
 from myLib import *
 
 # Set the input and output folder paths
-input_folder = 'beforeMasks'
-output_folder = 'afterMasks'
+input_folder = './before/mask'
+output_folder = './after/mask'
 create_folder_if_missing(input_folder)
 create_folder_if_missing(output_folder)
 

@@ -3,8 +3,8 @@ import os
 from myLib import *
 
 # Set the input and output folder paths
-input_folder = './beforeGreyscale'
-output_folder = './afterGreyscale'
+input_folder = './before/greyscale'
+output_folder = './after/greyscale'
 create_folder_if_missing(input_folder)
 create_folder_if_missing(output_folder)
 

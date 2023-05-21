@@ -1,6 +1,5 @@
-beforeGreyscale
-beforeMasks
-afterGreyscale
-afterMasks
 *.jpg
 *.png
+before
+after
+.DS_Store
