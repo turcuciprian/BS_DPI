@@ -1,15 +1,14 @@
 import os
+from paths import root_before, root_after
 
-root_before = './before'
-root_after = './after'
-blur = 'blur'
-grayscale = 'grayscale'
-mask = 'mask'
-noise = 'noise'
-resize = 'resize'
+folder_name_blur = 'blur'
+folder_name_greyscale = 'greyscale'
+folder_name_mask = 'mask'
+folder_name_noise = 'noise'
+folder_name_resize = 'resize'
 
 # list of folders to generate
-list_of_folders = [blur, grayscale, mask, noise, resize]
+list_of_folders = [folder_name_blur, folder_name_greyscale, folder_name_mask, folder_name_noise, folder_name_resize]
 
 # create base root folders if they don't exist
 os.makedirs(root_before,exist_ok=True)
