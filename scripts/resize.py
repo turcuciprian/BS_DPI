@@ -1,5 +1,6 @@
 import os
 from PIL import Image
+from paths import root_before, root_after, folder_name_resize
 
 def resize_and_crop_images(input_path, output_path, size):
     # Create output folder if it doesn't exist
@@ -37,8 +38,8 @@ def resize_and_crop_images(input_path, output_path, size):
 
 # using it:
 
-input_folder = "./before/resize"
-output_folder = "./after/resize"
+input_folder =root_before
+output_folder =os.path.join(root_after, folder_name_resize)
 image_size = (800, 600)
 
 resize_and_crop_images(input_folder, output_folder, image_size)
