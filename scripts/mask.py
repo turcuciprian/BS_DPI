@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 import os
 from lib.main import *
-from paths import root_before, root_after, folder_name_mask
+from lib.paths import root_before, root_after, folder_name_mask
 
 # Set the input and output folder paths
 input_folder = root_before

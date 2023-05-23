@@ -1,7 +1,7 @@
 from PIL import Image
 import os
 from lib.main import *
-from paths import root_before, root_after, folder_name_greyscale
+from lib.paths import root_before, root_after, folder_name_greyscale
 
 
 # Set the input and output folder paths
