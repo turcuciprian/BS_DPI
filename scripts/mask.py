@@ -1,14 +1,12 @@
 from PIL import Image
 import numpy as np
 import os
-from myLib import *
+from lib.main import *
 from paths import root_before, root_after, folder_name_mask
 
 # Set the input and output folder paths
-input_folder = os.path.join(root_before, folder_name_mask)
-input_output_folderfolder = os.path.join(root_after, folder_name_mask)
-create_folder_if_missing(input_folder)
-create_folder_if_missing(output_folder)
+input_folder = root_before
+output_folder = os.path.join(root_after, folder_name_mask)
 
 # Define the color threshold (in RGB)
 red_threshold = (255, 0, 0)

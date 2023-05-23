@@ -1,11 +1,11 @@
 from PIL import Image
 import os
-from myLib import *
+from lib.main import *
 from paths import root_before, root_after, folder_name_greyscale
 
 
 # Set the input and output folder paths
-input_folder = os.path.join(root_before,folder_name_greyscale)
+input_folder = root_before
 output_folder = os.path.join(root_after,folder_name_greyscale)
 create_folder_if_missing(input_folder)
 create_folder_if_missing(output_folder)
