@@ -3,7 +3,7 @@ from PIL import Image
 from PIL import ImageEnhance
 from lib.paths import root_before, root_after, folder_name_over_expose
 
-def overexpose_images(source_folder, destination_folder, times_to_expose):
+def over_expose_images(source_folder, destination_folder, times_to_expose):
     # Check if the destination folder exists, if not, create it
     if not os.path.exists(destination_folder):
         os.makedirs(destination_folder)
@@ -34,4 +34,4 @@ def overexpose_images(source_folder, destination_folder, times_to_expose):
 # overexpose_images('source_folder_path', 'destination_folder_path',2)
 
 
-overexpose_images(root_before, os.path.join(root_after,folder_name_over_expose),2)
+over_expose_images(root_before, os.path.join(root_after,folder_name_over_expose),2)

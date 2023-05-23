@@ -35,14 +35,3 @@ def resize_and_crop_images(input_path, output_path, size):
 # image_size = (300, 200)
 
 # resize_and_crop_images(input_folder, output_folder, image_size)
-
-
-# 
-# Using it:
-# 
-
-input_folder =root_before
-output_folder =os.path.join(root_after, folder_name_resize)
-image_size = (800, 600)
-
-resize_and_crop_images(input_folder, output_folder, image_size)
