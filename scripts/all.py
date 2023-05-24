@@ -4,7 +4,9 @@ from resize import resize_and_crop_images
 from greyscale import greyscale
 from darken import darken_images
 from over_expose import over_expose_images
-from lib.paths import root_before, root_after, folder_name_resize, folder_name_greyscale, folder_name_darken
+from blur import blur_images
+from noise import add_noise_to_images
+from lib.paths import root_before, root_after, folder_name_resize, folder_name_greyscale, folder_name_darken, folder_name_blur,folder_name_noise
 
 # 
 #  1. Create the destination folders
@@ -55,3 +57,25 @@ over_exposed_output_folder =os.path.join(root_after, over_expose_input_folder)
 
 # process
 over_expose_images(input_folder, over_exposed_output_folder,2)
+
+# 
+#  6. Blur Resized
+# 
+
+# prep
+blur_input_folder =resized_output_folder
+blur_output_folder =os.path.join(root_after, folder_name_blur)
+
+# process
+blur_images(input_folder, blur_output_folder,0.02)
+
+# 
+#  7. Noise Resized
+# 
+
+# prep
+noise_input_folder =resized_output_folder
+noise_output_folder =os.path.join(root_after, folder_name_noise)
+
+# process
+add_noise_to_images(input_folder, noise_output_folder,70)
