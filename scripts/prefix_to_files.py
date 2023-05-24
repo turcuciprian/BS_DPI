@@ -19,6 +19,7 @@ def add_prefix_to_files(first_folder_source_path, second_folder_source_path, out
             destination_file_path = os.path.join(output_folder_path, new_file_name)
             shutil.copy2(source_file_path, destination_file_path)
 
+
 # # Example usage
 # first_folder_path = "/path/to/first_folder"
 # second_folder_path = "/path/to/second_folder"
