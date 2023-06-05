@@ -3,13 +3,18 @@ import cv2
 import numpy as np
 from lib.main import *
 
+
 def add_noise_to_images(input_folder, output_folder, noise_percentage):
     # Create the output folder if it doesn't exist
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
     # Get a list of all image files in the input folder
-    image_files = [f for f in os.listdir(input_folder) if os.path.isfile(os.path.join(input_folder, f))]
+    image_files = [
+        f
+        for f in os.listdir(input_folder)
+        if os.path.isfile(os.path.join(input_folder, f))
+    ]
 
     # Process each image file
     for filename in image_files:
@@ -32,6 +37,7 @@ def add_noise_to_images(input_folder, output_folder, noise_percentage):
         cv2.imwrite(output_path, noisy_image)
 
         print(f"Noise added to {filename} and saved as {output_path}")
+
 
 # # Example usage
 # input_folder = "path/to/input/folder"

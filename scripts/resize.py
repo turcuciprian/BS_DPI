@@ -3,6 +3,7 @@ from PIL import Image
 from lib.paths import root_before, root_after, folder_name_resized
 from lib.main import *
 
+
 def resize_and_crop_images(input_path, output_path, size):
     # Create output folder if it doesn't exist
     if not os.path.exists(output_path):
@@ -14,14 +15,14 @@ def resize_and_crop_images(input_path, output_path, size):
     for filename in files:
         # Avoid non jpg or png files
         if not is_image(filename):
-            continue 
+            continue
         # Create input and output file paths
         input_file = os.path.join(input_path, filename)
         output_file = os.path.join(output_path, filename)
 
         # Open the input image
         image = Image.open(input_file)
-        
+
         # ---
         # Calculate aspect ratio.
         w, h = image.size
@@ -52,9 +53,10 @@ def resize_and_crop_images(input_path, output_path, size):
 
     print("Images resized and cropped successfully.")
 
+
 #
 # Usage example:
-# 
+#
 
 # input_folder = "path/to/input/folder"
 # output_folder = "path/to/output/folder"
