@@ -23,7 +23,6 @@ def resize_and_crop_images(input_path, output_path, size):
         # Open the input image
         image = Image.open(input_file)
 
-        # ---
         # Calculate aspect ratio.
         w, h = image.size
         crop_width, crop_height = size
@@ -43,10 +42,9 @@ def resize_and_crop_images(input_path, output_path, size):
 
         # Crop the image.
         resized_image = image.crop((left, top, right, bottom))
-        # ---
 
-        # Resize and crop the image
-        resized_image = resized_image.resize(size, Image.ANTIALIAS)
+        # # Resize and crop the image
+        # resized_image = resized_image.resize(size, Image.ANTIALIAS)
 
         # Save the resized and cropped image
         resized_image.save(output_file)
