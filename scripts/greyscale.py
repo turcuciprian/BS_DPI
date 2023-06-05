@@ -14,17 +14,16 @@ def greyscale(source_folder, destination_folder):
         if not is_image(filename):
             continue
 
-            # Open the image
-            image_path = os.path.join(source_folder, filename)
-            image = Image.open(image_path)
+        # Open the image
+        image_path = os.path.join(source_folder, filename)
+        image = Image.open(image_path)
 
-            # # Convert the image to greyscale with image mode rgb
-            # Convert the image to black and white
-            image = image.convert("L")
+        # # Convert the image to greyscale with image mode rgb
+        # Convert the image to black and white
+        image = image.convert("L")
+        # Convert the image back to RGB mode
+        image = image.convert("RGB")
 
-            # Convert the image back to RGB mode
-            image = image.convert("RGB")
-
-            # Save the black and white image in the output folder
-            output_path = os.path.join(destination_folder, filename)
-            image.save(output_path)
+        # Save the black and white image in the output folder
+        output_path = os.path.join(destination_folder, filename)
+        image.save(output_path)

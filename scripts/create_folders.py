@@ -10,6 +10,8 @@ from lib.paths import (
     folder_name_over_expose,
     folder_name_darken,
     folder_name_all,
+    folder_name_all_images,
+    folder_name_all_masks,
 )
 
 
@@ -24,6 +26,8 @@ def create_folders():
         folder_name_over_expose,
         folder_name_darken,
         folder_name_all,
+        folder_name_all_images,
+        folder_name_all_masks,
     ]
 
     # create base root folders if they don't exist

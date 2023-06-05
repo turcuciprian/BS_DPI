@@ -4,7 +4,10 @@ from lib.main import *
 
 
 def prefix_and_gather_recursively(
-    first_folder_source_path, second_folder_source_path, output_folder_path
+    first_folder_source_path,
+    second_folder_source_path,
+    output_first_folder_path,
+    output_second_folder_path,
 ):
     # Rename files in the first folder
     first_folder_name = os.path.basename(os.path.normpath(first_folder_source_path))
@@ -15,8 +18,11 @@ def prefix_and_gather_recursively(
                 continue
             source_file_path = os.path.join(root, filename)
             new_file_name = first_folder_name + "_" + filename
-            destination_file_path = os.path.join(output_folder_path, new_file_name)
-            shutil.copy2(source_file_path, destination_file_path)
+            destination_file_path = os.path.join(
+                output_first_folder_path, new_file_name
+            )
+            dest = shutil.copy2(source_file_path, destination_file_path)
+            print("gathered: " + dest)
 
     # Rename files in the second folder
     for root, _, files in os.walk(second_folder_source_path):
@@ -29,7 +35,9 @@ def prefix_and_gather_recursively(
                 continue
             source_file_path = os.path.join(root, filename)
             new_file_name = first_folder_name + "_" + filename
-            destination_file_path = os.path.join(output_folder_path, new_file_name)
+            destination_file_path = os.path.join(
+                output_second_folder_path, new_file_name
+            )
             shutil.copy2(source_file_path, destination_file_path)
 
 
