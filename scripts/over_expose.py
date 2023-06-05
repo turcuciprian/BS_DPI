@@ -33,5 +33,5 @@ def over_expose_images(source_folder, destination_folder, times_to_expose):
 # Example usage
 # overexpose_images('source_folder_path', 'destination_folder_path',2)
 
-
-over_expose_images(root_before, os.path.join(root_after,folder_name_over_expose),2)
+# Example:
+# over_expose_images(root_before, os.path.join(root_after,folder_name_over_expose),2)

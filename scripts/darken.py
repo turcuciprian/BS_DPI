@@ -30,5 +30,6 @@ def darken_images(source_folder, destination_folder, percentage_to_darken):
 # Example usage
 # darken_images("path/to/source/folder", "path/to/destination/folder",0.5)
 
-darken_images(root_before, os.path.join(root_after,folder_name_darken),0.5)
+# Example
+# darken_images(root_before, os.path.join(root_after,folder_name_darken),0.5)
 

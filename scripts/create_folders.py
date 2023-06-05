@@ -1,10 +1,10 @@
 import os
-from lib.paths import root_before, root_after, folder_name_blur, folder_name_greyscale, folder_name_mask, folder_name_noise, folder_name_resize,folder_name_over_expose, folder_name_darken
+from lib.paths import root_before, root_after, folder_name_blur, folder_name_greyscale, folder_name_mask, folder_name_noise, folder_name_resized,folder_name_over_expose, folder_name_darken
 
 
 def create_folders():
     # list of folders to generate
-    list_of_folders = [folder_name_blur, folder_name_greyscale, folder_name_mask, folder_name_noise, folder_name_resize,folder_name_over_expose, folder_name_darken]
+    list_of_folders = [folder_name_blur, folder_name_greyscale, folder_name_mask, folder_name_noise, folder_name_resized,folder_name_over_expose, folder_name_darken]
 
     # create base root folders if they don't exist
     os.makedirs(root_before,exist_ok=True)
