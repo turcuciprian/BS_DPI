@@ -9,6 +9,7 @@ from lib.paths import (
     folder_name_resized,
     folder_name_over_expose,
     folder_name_darken,
+    folder_name_all,
 )
 
 
