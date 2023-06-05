@@ -8,5 +8,5 @@ def create_folder_if_missing(folder_name):
         os.makedirs(folder_name)
         
 def is_image(filename):
-    return filename.endswith('.jpg') or filename.endswith('.png')
+    return filename.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.gif'))
     
