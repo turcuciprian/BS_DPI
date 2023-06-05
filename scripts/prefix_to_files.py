@@ -1,21 +1,31 @@
 import os
 import shutil
+from lib.main import *
 
 def add_prefix_to_files(first_folder_source_path, second_folder_source_path, output_folder_path):
     # Rename files in the first folder
     first_folder_name = os.path.basename(os.path.normpath(first_folder_source_path))
     for root, _, files in os.walk(first_folder_source_path):
-        for file_name in files:
-            source_file_path = os.path.join(root, file_name)
-            new_file_name = first_folder_name + "_" + file_name
+        for filename in files:
+            # Avoid non jpg or png files
+            if not is_image(filename):
+                continue 
+            source_file_path = os.path.join(root, filename)
+            new_file_name = first_folder_name + "_" + filename
             destination_file_path = os.path.join(output_folder_path, new_file_name)
             shutil.copy2(source_file_path, destination_file_path)
 
     # Rename files in the second folder
     for root, _, files in os.walk(second_folder_source_path):
-        for file_name in files:
-            source_file_path = os.path.join(root, file_name)
-            new_file_name = first_folder_name + "_" + file_name
+        for filename in files:
+             # Avoid non jpg or png files
+            if not is_image(filename):
+                continue 
+            # Avoid non jpg or png files
+            if not is_image(filename):
+                continue 
+            source_file_path = os.path.join(root, filename)
+            new_file_name = first_folder_name + "_" + filename
             destination_file_path = os.path.join(output_folder_path, new_file_name)
             shutil.copy2(source_file_path, destination_file_path)
 

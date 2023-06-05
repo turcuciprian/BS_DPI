@@ -14,8 +14,9 @@ color_threshold = 50
 
 # Iterate through each file in the input folder
 for filename in os.listdir(input_folder):
-    # Check if the file is an image
-    if filename.endswith('.jpg') or filename.endswith('.png'):
+    # Avoid non jpg or png files
+        if not is_image(filename):
+            continue
         # Open the image
         image_path = os.path.join(input_folder, filename)
         image = Image.open(image_path)

@@ -1,6 +1,7 @@
 import os
 import cv2
 import numpy as np
+from lib.main import *
 
 def add_noise_to_images(input_folder, output_folder, noise_percentage):
     # Create the output folder if it doesn't exist
@@ -12,6 +13,9 @@ def add_noise_to_images(input_folder, output_folder, noise_percentage):
 
     # Process each image file
     for filename in image_files:
+        # Avoid non jpg or png files
+        if not is_image(filename):
+            continue
         # Load the image
         image_path = os.path.join(input_folder, filename)
         image = cv2.imread(image_path)

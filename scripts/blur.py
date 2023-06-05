@@ -1,5 +1,6 @@
 import cv2
 import os
+from lib.main import *
 
 def blur_images(input_folder, output_folder, blur_percentage):
     # Ensure the output directory exists
@@ -7,6 +8,9 @@ def blur_images(input_folder, output_folder, blur_percentage):
     
     # Iterate over every file in the input directory
     for filename in os.listdir(input_folder):
+        # Avoid non jpg or png files
+        if not is_image(filename):
+            continue
         # Make sure the file is an image (you may need to adjust this depending on your image types)
         if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.gif')):
             # Read the image

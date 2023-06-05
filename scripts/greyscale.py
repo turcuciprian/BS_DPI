@@ -9,8 +9,10 @@ def greyscale(source_folder, destination_folder):
 
     # Iterate through each file in the input folder
     for filename in os.listdir(source_folder):
-        # Check if the file is an image
-        if filename.endswith('.jpg') or filename.endswith('.png'):
+        # Avoid non jpg or png files
+        if not is_image(filename):
+            continue
+
             # Open the image
             image_path = os.path.join(source_folder, filename)
             image = Image.open(image_path)

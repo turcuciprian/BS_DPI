@@ -6,7 +6,7 @@ from darken import darken_images
 from over_expose import over_expose_images
 from blur import blur_images
 from noise import add_noise_to_images
-from lib.paths import root_before, root_after, folder_name_resized, folder_name_greyscale, folder_name_darken, folder_name_blur,folder_name_noise
+from lib.paths import root_before, root_after, folder_name_resized, folder_name_greyscale, folder_name_darken, folder_name_blur,folder_name_noise, folder_name_over_expose
 
 # 
 #  1. Create the destination folders
@@ -53,7 +53,7 @@ darken_images(darken_input_folder, darken_output_folder,0.5)
 
 # prep
 over_expose_input_folder =resized_output_folder
-over_exposed_output_folder =os.path.join(root_after, folder)
+over_exposed_output_folder =os.path.join(root_after, folder_name_over_expose)
 
 # process
 over_expose_images(over_expose_input_folder, over_exposed_output_folder,2)

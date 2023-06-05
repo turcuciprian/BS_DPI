@@ -6,3 +6,7 @@ def create_folder_if_missing(folder_name):
     if not folderExists:
    # Create a new directory because it does not exist
         os.makedirs(folder_name)
+        
+def is_image(filename):
+    return filename.endswith('.jpg') or filename.endswith('.png')
+    
